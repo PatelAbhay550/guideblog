@@ -2,6 +2,7 @@ import Link from "next/link";
 import BlogCard from "./Card";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/lib/firebaseconfig";
+import UIElements from "./UIElements";
 
 export default async function Blog() {
   const q = query(collection(db, "Blogposts"));
@@ -28,8 +29,22 @@ export default async function Blog() {
           Explore the latest tips and tricks on coding, React.js, Tailwind CSS,
           and web development.
         </p>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+          Tailwind UI Elements
+        </h2>
+        <p className="text-gray-800 mb-4 pb-8">
+          Interactive Tailwind CSS UI Elements: Enhance User Experience with
+          Modern Components. In today’s digital landscape, creating engaging and
+          interactive web interfaces is crucial for a memorable user experience.
+          With Tailwind CSS, you can effortlessly design visually appealing and
+          functional UI components. In this guide, we explore a set of
+          interactive Tailwind CSS elements that are perfect for enhancing your
+          web projects.
+        </p>
+        <UIElements />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Blogs</h2>
           {blogPosts.map((post, index) => (
             <Link href={`/posts/${post.slug}`} key={index}>
               <BlogCard
