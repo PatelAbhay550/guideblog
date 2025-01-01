@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://guideblog.vercel.app/sitemap.xml
