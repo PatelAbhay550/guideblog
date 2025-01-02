@@ -25,7 +25,7 @@ export default async function sitemap() {
 
   const staticUrls = [
     {
-      url: "https://www.guideblog.vercel.app",
+      url: "https://www.guideblog.me/",
       lastModified: new Date().toISOString(),
       changeFrequency: "monthly",
       priority: 1,
